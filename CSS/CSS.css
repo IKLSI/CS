@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto;
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Personnalisation différents parties de la page */
+
+.Page {
+    display: grid;
+    width: 1200px;
+    margin: 100px auto;
+    background: #333;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) ,0 1px 2px rgba(0,0,0,0.24);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left-column right-column right-column";
+}
+
+.Section {
+    margin-bottom: 1.5rem;
+}
+
+.Partie_Gauche {
+    padding: 50px;
+    color: white;
+    background-color: cyan;
+    grid-area: left-column;
+}
+
+.Partie_Droite {
+    display: grid;
+    grid-area: right-column;
+    grid-template-rows: 250px 1fr;
+    grid-template-areas: "header" "content";
+}
+
+/* Affichage image profil */
+
+.Profil {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 150px;
+    border: gold;
+    border-radius: 50%;
+}
+
+.En_tête {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: antiquewhite;
+    grid-area: header;
+}
+
+.Setup {
+    padding: 0;
+    list-style-type: none;
+    columns: 2;
+}
+
+.PC_ {
+  width: 350px;
+  height: 250px;
+}
+
+/* Personnalisation éléments textuels */
+
+h2 {
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.PC {
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    list-style-type: none;
+}
+
+.Contenu {
+    padding: 50px;
+    color: white;
+    grid-area: content;
+}
+
+/* Affichage logo Steam | Discord */
+
+.Steam {
+    content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/800px-Steam_icon_logo.svg.png');
+    width: 20px;
+    height: 20px;
+}
+
+.Discord {
+    content: url('https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png');
+    width: 20px;
+    height: 20px;
+}
